@@ -39,9 +39,6 @@ const startApolloServer = async () => {
   
   // Apollo middleware — NUNCA DEBE FALTAR
   app.use('/graphql', expressMiddleware(server, { context: authenticateToken }));
-  
-  
-
     if (process.env.NODE_ENV === 'production') {
       app.use(express.static(path.join(__dirname, '../../client/dist')))
 

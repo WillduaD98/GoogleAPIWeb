@@ -3,10 +3,10 @@
     /* Language and Environment */
     "target": "ES2020" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
 
-    "outDir": "./dist",
-    "rootDir": "./src",
+    "outDir": "./server/dist",
+    "rootDir": "./server/src",
     /* Modules */
-    "module": "ESNext" /* Specify what module code is generated. */,
+    "module": "NodeNext" /* Specify what module code is generated. */,
 
     "moduleResolution": "NodeNext",
     "skipLibCheck": true,
@@ -30,5 +30,5 @@
     "noImplicitOverride": true /* Ensure overriding members in derived classes are marked with an override modifier. */,
     "useUnknownInCatchVariables": true /* Ensure 'unknown' is used for catch clause variables. */
   },
-  "include": ["src"]
+  "include": ["server/src"]
 }
