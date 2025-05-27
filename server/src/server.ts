@@ -8,6 +8,7 @@ import { typeDefs, resolvers} from './schemas/index.js'
 // import routes from './routes/index.js';
 import { authenticateToken } from './services/auth.js';
 import dotenv from 'dotenv';
+import { fileURLToPath } from 'node:url';
 dotenv.config();
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
@@ -21,6 +22,8 @@ const server = new ApolloServer({
 console.log('🔎 typeDefs:', typeDefs);
 console.log('🔎 resolvers:', resolvers);
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const startApolloServer = async () => {
   await server.start();
